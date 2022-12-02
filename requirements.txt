@@ -2,7 +2,7 @@ alembic==1.4.2
 attrs==21.2.0
 billiard==3.6.4.0
 bcrypt==3.2.0
-celery==4.4.7
+celery==5.2.2
 cffi==1.14.6
 cic-eth~=0.13.0
 cic-notify~=0.4.10
