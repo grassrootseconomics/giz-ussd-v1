@@ -1,0 +1,14 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "enter_gender",
+    "dest": "economic_activity_selection",
+    "conditions": "cic_ussd.state_machine.logic.validator.is_valid_gender_selection",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_gender",
+    "dest": "exit_invalid_menu_option"
+  }
+]

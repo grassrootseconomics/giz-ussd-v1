@@ -1,0 +1,44 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "balances_sub_menu",
+    "dest": "account_balances_pin_authorization",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_one_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "balances_sub_menu",
+    "dest": "community_fund_balances_pin_authorization",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_two_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "account_balances_pin_authorization",
+    "dest": "account_balances",
+    "conditions": "cic_ussd.state_machine.logic.pin.is_authorized_pin"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "account_balances_pin_authorization",
+    "dest": "exit_pin_blocked",
+    "conditions": "cic_ussd.state_machine.logic.pin.is_blocked_pin"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "community_fund_balances_pin_authorization",
+    "dest": "community_fund_balances",
+    "conditions": "cic_ussd.state_machine.logic.pin.is_authorized_pin"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "community_fund_balances_pin_authorization",
+    "dest": "exit_pin_blocked",
+    "conditions": "cic_ussd.state_machine.logic.pin.is_blocked_pin"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "community_fund_balances",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_nine_selected"
+  }
+]

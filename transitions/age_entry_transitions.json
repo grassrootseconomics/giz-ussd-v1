@@ -1,0 +1,15 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "enter_age",
+    "dest": "enter_gender",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry",
+    "conditions": "cic_ussd.state_machine.logic.survey.is_age_valid"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_age",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  }
+]

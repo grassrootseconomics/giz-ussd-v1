@@ -1,0 +1,14 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "enter_full_name",
+    "dest": "enter_gender",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_full_name",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  }
+]

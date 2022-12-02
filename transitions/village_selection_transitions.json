@@ -1,0 +1,16 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "enter_village_selection_first_set",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected",
+    "unless": "cic_ussd.state_machine.logic.village.is_valid_village_selection"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_village_selection_first_set",
+    "dest": "enter_full_name",
+    "conditions": "cic_ussd.state_machine.logic.village.is_valid_village_selection",
+    "after": "cic_ussd.state_machine.logic.village.save_village_selection"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "monthly_expenditure_query",
+    "dest": "twenty_thousand_band",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_one_selected",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "monthly_expenditure_query",
+    "dest": "thirty_five_thousand_band",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_two_selected",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "monthly_expenditure_query",
+    "dest": "above_thirty_five_thousand_band",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_three_selected",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "monthly_expenditure_query",
+    "dest": "exit_invalid_menu_option"
+  }
+]

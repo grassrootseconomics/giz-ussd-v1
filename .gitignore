@@ -1,0 +1,26 @@
+# byte-compiled files
+__pycache__/
+
+# build packages
+build/*
+
+# celery files
+celerybeat-schedule
+celerybeat.pid
+
+# ide-user-sepcific files
+.idea
+
+# distribution packaging
+dist
+*.egg-info/
+
+# sphinx documentation
+docs/_build/
+
+# testing files
+.coverage
+.pytest_cache/
+
+# virtualenv
+venv/

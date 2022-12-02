@@ -1,0 +1,14 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "economic_activity_selection",
+    "dest": "monthly_expenditure_query",
+    "conditions": "cic_ussd.state_machine.logic.survey.is_valid_economic_activity_selection",
+    "after": "cic_ussd.state_machine.logic.survey.save_survey_entry"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "economic_activity_selection",
+    "dest": "exit_invalid_menu_option"
+  }
+]

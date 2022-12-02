@@ -1,0 +1,510 @@
+keys,en,fr
+initial_language_selection,"CON Welcome to the network, choose your language:
+%{first_language_set}
+00. Exit","CON Bienvenu(e) sur le reseau
+Choisir une langue
+%{first_language_set}
+00. Quitter"
+initial_pin_entry,CON Please enter a new four number PIN for your account.,CON Veuillez saisir un code a 4 chiffres
+initial_pin_confirmation,CON Enter your four number PIN again,CON Saissisez a nouveau le code a 4 chiffres
+enter_given_name,"CON Enter first name
+0. Back","CON Votre prenom
+0. Retour"
+enter_family_name,"CON Enter family name
+0. Back","CON Votre nom
+0. Retour"
+enter_date_of_birth,"CON Enter year of birth
+0. Back","CON Annee de naissance
+0. Retour"
+enter_gender,"CON Enter gender
+1. Male
+2. Female
+0. Back","CON Sexe
+1. Masculin
+2. Feminin
+0. Retour"
+enter_meta_gender,"CON Enter gender
+1. Male
+2. Female
+3. Other
+0. Back","CON Sexe
+1. Masculin
+2. Feminin
+3. Autre
+0. Retour"
+enter_location,"CON Enter your location
+0. Back","CON Veuillez saisir le nom de votre village
+0. Retour"
+enter_products,"CON Please enter a product or service you offer
+0. Back","CON Quel service/ bien vendez-vous ?
+0. Retour"
+start,"CON Welcome to Our Village network: %{village_name}
+Balance %{account_balance} %{account_token_name}
+1. Transfer
+2. My Vouchers
+3. My Account
+4. Help","CON Bienvenue sur notre reseau: %{village_name}
+Solde %{account_balance} %{account_token_name}
+1. Envoyer
+2. Mes bons
+3. Mon compte
+4. Aide"
+enter_transaction_recipient,"CON Enter the beneficiary's number:
+0. Back","CON Entrer le numero du beneficiaire:
+0. Retour"
+enter_transaction_amount,"CON Amount to be transferred:
+0. Back","CON Entrer la valuer de l'echange
+0. Retour"
+first_account_tokens_set,"CON Choose a number or symbol from your balances:
+%{first_account_tokens_set}
+0. Back
+11. Next
+00. Exit","CON Choisissez un numero ou un symbole dans votre solde :
+%{first_account_tokens_set}
+0. Retour
+11. Suivant
+00. Quitter"
+middle_account_tokens_set,"CON Choose a number or symbol from your balances:
+%{middle_account_tokens_set}
+11. Next
+22. Previous
+00. Exit","CON Choisissez un numero ou un symbole dans votre solde :
+%{middle_account_tokens_set}
+11. Suivant
+22. Retour
+00. Quitter"
+last_account_tokens_set,"CON Choose a number or symbol from your balances:
+%{last_account_tokens_set}
+22. Previous
+00. Exit","CON Choisissez un numero ou un symbole dans votre solde:
+%{last_account_tokens_set}
+22. Retour
+00. Quitter"
+token_selection_pin_authorization.first,"CON %{token_data}
+Enter pin to select:
+0. Back","CON %{token_data}
+Saisir le code a selectionner :
+0. Back"
+token_selection_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+account_management,"CON My account
+1. My profile
+2. Change language
+3. Check Balance
+4. Check statement
+5. PIN options
+0. Back","CON Mon compte
+1. Mon profil
+2. Changer langue
+3. Verifier solde
+4. Dernieres transactions
+5. Options PIN
+0. Retour"
+metadata_management,"CON My profile
+1. Edit name
+2. Edit gender
+3. Edit age
+4. Edit location
+5. Edit products
+6. View profile
+0. Back","CON Mon profil
+1. Changer nom
+2. Changer sexe
+3. Changer age
+4. Changer la localite
+5. Changer le service/ produit
+6. Consulter mon profil
+0. Retour"
+display_user_metadata,"CON Profile:
+Name: %{full_name}
+Gender: %{gender}
+Age: %{age}
+Location: %{location}
+You sell: %{products}
+0. Back","CON Profil :
+Nom: %{full_name}
+Sexe: %{gender}
+Age: %{age}
+Localite: %{location}
+Vous vendez: %{products}
+0. Retour"
+select_preferred_language,"CON Choose language:
+%{first_language_set}
+0. Back
+11. Next
+00. Exit","CON Choisir la langue:
+%{first_language_set}
+0. Retour
+11. Suivant
+00. Quitter"
+retry_pin_entry,"CON Incorrect PIN entered, please try again.You have %{remaining_attempts} attempts remaining.
+0. Back","CON Code PIN incorrect, reessayer.Plus que %{remaining_attempts} tentatives.
+0. Retour"
+pin_management,"CON Pin options
+1. Change my PIN
+2. Reset other PIN
+3. Guard my PIN
+0. Back","CON Gestion du code
+1. Changer mon code PIN
+2. reinitialiser mon code PIN
+3. Sauvegarde mon code PIN
+0. Retour"
+enter_current_pin.first,"CON Enter current PIN.
+0. Back","CON Entrer code PIN actuel.
+0. Retour"
+enter_current_pin.retry,%{retry_pin_entry},%{retry_pin_entry}
+enter_new_pin,"CON Enter your new four number PIN
+0. Back","CON Saisir le nouveau code a 4 chiffres
+0. Retour"
+new_pin_confirmation,"CON Enter your new four number PIN again
+0. Back","CON Saisir le code a nouveau
+0. Retour"
+reset_guarded_pin,"CON Enter phone number you are the guardian of reset their pin
+0. Back","CON Saisir le numero de telephone que vous parrainez
+0. Retour"
+reset_guarded_pin_authorization.first,"CON Enter YOUR pin to confirm %{guarded_account_information}'s pin reset
+0. Back","CON Saisir VOTRE CODE pour confirmer la reinitialisation %{guarded_account_information}'s
+0. Retour"
+reset_guarded_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+exit_pin_reset_initiated_success,"CON Success: You have initiated a PIN reset for %{guarded_account_information}
+0. Back
+9. Exit","CON Reussi: Vous avez initialise le code pin pour %{guarded_account_information}
+0. Retour
+9. Quitter"
+exit_not_authorized_for_pin_reset,"CON Failure: You are not authorized to reset that PIN. You must be a guardian!
+0. Back
+9. Exit","CON Echec: Vous n'etes pas authorise a reinitialiser le code PIN. Vous devez etre parrain!
+0. Retour
+9. Quitter"
+guard_pin,"CON PIN guardians
+1. View
+2. Add
+3. Remove
+0. Back","CON Code PIN parrain
+1. Consulter
+2. Ajouter
+3. Retirer
+0. Retour"
+guardian_list_pin_authorization.first,"CON Enter your pin to view set guardians
+0. Back","CON Saisir le code PIN pour consulter la liste des parrains
+0. Retour"
+guardian_list_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+guardian_list,"CON %{guardians_list}
+0. Back
+9. Exit","CON %{guardians_list}
+0. Retour
+9. Quitter"
+add_guardian,"CON Enter phone number to add as pin reset guardian
+0. Back","CON Ajouter un numero parrain pour la reinitialisation de votre code PIN
+0. Retour"
+add_guardian_pin_authorization.first,"CON Enter your pin to add %{guardian_information} as your PIN reset guardian
+0. Back","CON Saisir votre pin pour enregistrer %{guardian_information} comme votre parrain reinitialisation code PIN
+0. Retour"
+add_guardian_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+exit_guardian_addition_success,"CON Success: %{guardian_information} can now reset your PIN
+0. Back
+9. Exit","CON Succes: %{guardian_information} peut desormais reinitialiser votre mot de passe
+0. Retour
+9. Quitter"
+exit_invalid_guardian_addition,"CON %{error_exit}
+0. Back
+9. Exit","CON %{error_exit}
+0. Retour
+9. Quitter"
+remove_guardian,"CON Enter phone number to revoke guardianship:
+0. Back","CON Saisir un numero de telephone pour revoquer le parrainage:
+0. Retour"
+remove_guardian_pin_authorization.first,"CON Enter your pin to remove %{guardian_information} as your PIN reset guardian
+0. Back","CON Entre votre code pin pour retirer %{guardian_information} comme votre parrain reinitialisation code PIN
+0. Retour"
+remove_guardian_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+exit_guardian_removal_success,"CON Success: %{guardian_information} PIN reset guardianship is revoked
+0. Back
+9. Exit","CON Succes: %{guardian_information} a ete revoque comme parrain reinitialisation code PIN
+0. Retour
+9. Quitter"
+exit_invalid_guardian_removal,"CON %{error_exit}
+0. Back
+9. Exit","CON %{error_exit}
+0. Retour
+9. Quitter"
+transaction_pin_authorization.first,"CON %{recipient_information} will receive %{transaction_amount} %{token_symbol} from %{sender_information}.
+Please enter your PIN to confirm.
+0. Back","CON %{recipient_information} va recevoir %{transaction_amount} %{token_symbol} de %{sender_information}.
+Entrez votre code PIN pour confirmer
+0. Retour"
+transaction_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+display_metadata_pin_authorization.first,"CON Please enter your PIN
+0. Back","CON Entrez votre code PIN
+0. Retour"
+display_metadata_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+account_balances_pin_authorization.first,"CON Please enter your PIN to view balances
+0. Back","CON Entrez votre code PIN to consulter votre solde
+0. Retour"
+account_balances_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+account_statement_pin_authorization.first,"CON Please enter your PIN to view statement
+0. Back","CON Entrez votre code PIN to consulter les dernieres transactions
+0. Retour"
+account_statement_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+name_edit_pin_authorization.first,"CON Please enter your PIN
+0. Back","CON Entrez votre code PIN
+0. Retour"
+name_edit_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+dob_edit_pin_authorization.first,"CON Please enter your PIN
+0. Back","CON Entrez votre code PIN
+0. Retour"
+dob_edit_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+gender_edit_pin_authorization.first,"CON Please enter your PIN
+0. Back","CON Entrez votre code PIN
+0. Retour"
+gender_edit_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+location_edit_pin_authorization.first,"CON Please enter your PIN
+0. Back","CON Entrez votre code PIN
+0. Retour"
+location_edit_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+products_edit_pin_authorization.first,"CON Please enter your PIN
+0. Back","CON Entrez votre code PIN
+0. Retour"
+products_edit_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+account_balances.available_balance,"CON Your balances are as follows:
+  %{available_balance} %{token_symbol}
+0. Back","CON Solde des comptes :
+  %{available_balance} %{token_symbol}
+0. Retour"
+account_balances.with_fees,"CON Your balances are as follows:
+balances: %{available_balance} %{token_symbol}
+fees: %{tax} %{token_symbol}
+0. Back","CON Solde des comptes:
+solde: %{available_balance} %{token_symbol}
+frais: %{tax} %{token_symbol}
+0. Retour"
+account_balances.with_rewards,"CON Your balances are as follows:
+balance: %{available_balance} %{token_symbol}
+fees: %{tax} %{token_symbol}
+rewards: %{bonus} %{token_symbol}
+0. Back","CON Solde des comptes:
+solde: %{available_balance} %{token_symbol}
+frais: %{tax} %{token_symbol}
+primes: %{bonus} %{token_symbol}
+0. Retour"
+first_transaction_set,"CON %{first_transaction_set}
+0. Back
+11. Next
+00. Exit","CON %{first_transaction_set}
+0. Retour
+11. Suivant
+00. Quitter"
+middle_transaction_set,"CON %{middle_transaction_set}
+11. Next
+22. Previous
+00. Exit","CON %{middle_transaction_set}
+11. Suivant
+22. Precedent
+00. Quitter"
+last_transaction_set,"CON %{last_transaction_set}
+22. Previous
+00. Exit","CON %{last_transaction_set}
+22. Precedent
+00. Quitter"
+exit,END Thank you for using the service.,END Merci d'utiliser nos services
+exit_invalid_request,END Invalid request.,END Demande invalide.
+exit_invalid_menu_option,"CON Invalid menu option. For help,call %{support_phone}.
+00. Back
+99. Exit","CON Menu invalide. Appellez %{support_phone} pour l'aide.
+00. Retour
+99. Quitter"
+exit_invalid_input,"CON Invalid input. Nothing selected
+00. Back
+99. Exit","CON Entree invalide. Aucune selection
+00. Retour
+99. Quitter"
+exit_pin_blocked,"END Your PIN has been blocked. For help, please call %{support_phone}.","END Votre code pin a ete bloque. Pour l'aide, appelez le service client au %{support_phone}."
+exit_invalid_pin,"END The PIN you have entered is invalid. PIN must consist of 4 digits. For help, call %{support_phone}.",END Le code PIN entre est invalide. PIN doit contenir 4 chiffres. Appelez le service client au %{support_phone}.
+exit_invalid_new_pin,"END The PIN you have entered is invalid. PIN must be different from your current PIN. For help, call %{support_phone}.",END Le code PIN entre est invalide. Nouveau code PIN doit different de lancien code PIN. Appelez le service client au %{support_phone}.
+exit_pin_mismatch,"END The new PIN does not match the one you entered. Please try again. For help, call %{support_phone}.",END Le nouveau code PIN ne correspond pas. Essayez a nouveau. Pour l'aide appelez %{support_phone}.
+exit_invalid_recipient,"CON %{invalid_number} is unregistered or is invalid, please re-enter:
+11. Invite to OurVillage
+99. Exit","CON Numéro %{invalid_number} est invalide ou non enregistré, veuillez reessayer:
+00. Inviter à OurVillage
+99. Quitter"
+exit_successful_transaction,"CON Your request has been sent. %{recipient_information} will receive %{transaction_amount} %{token_symbol} from %{sender_information}.
+00. Back
+99. Exit","CON Transaction effectuee %{recipient_information} vous recevrez %{transaction_amount} %{token_symbol} de %{sender_information}.
+00. Retour
+99. Quitter"
+exit_insufficient_balance,"CON Payment of %{amount} %{token_symbol} to %{recipient_information} has failed due to insufficient balance
+Balance: %{token_balance}
+00. Back
+99. Exit","CON Echec : Paiement de %{amount} %{token_symbol} a %{recipient_information} a echoue. Solde insuffisant
+Solde: %{token_balance}
+00. Retour
+99. Quitter"
+exit_successful_token_selection,"CON Success! %{token_symbol} is your active voucher.
+00. Back
+99. Exit","CON Succes! %{token_symbol} est votre OurVillage actif.
+00. Retour
+99. Quitter"
+invalid_service_code,Please dial %{valid_service_code} to access OurVillage Network,Tapez le %{valid_service_code} pour acceder au reseau OurVillage
+help,"CON For assistance call %{support_phone}
+00. Back
+99. Exit","CON Pour contacter le service client %{support_phone}
+00. Retour
+99. Quitter"
+complete,"CON Your request has been sent. You will receive an SMS shortly.
+00. Back
+99. Exit","CON Transaction effectuee, vous recevrez un message sous peu.
+00. Retour
+99. Quitter"
+account_creation_prompt,END Your account is being created. You will receive an SMS when your account is ready.,END Compte cree. Vous recevrez un message des que votre compte sera pret.
+initial_middle_language_set,"CON Choose language:
+%{middle_language_set}
+11. Next
+22. Previous
+00. Exit","CON Choisir la langue:
+%{middle_language_set}
+11. Retour
+22. Precedent
+00. Quitter"
+initial_last_language_set,"CON Choose language:
+%{last_language_set}
+22. Previous
+00. Exit","CON Choisir la langue:
+%{last_language_set}
+22. Precedent
+00. Quitter"
+middle_language_set,"CON Choose language:
+%{middle_language_set}
+11. Next
+22. Previous
+00. Exit","CON Choisir la langue:
+%{middle_language_set}
+11. Suivant
+22. Precedent
+00. Quitter"
+last_language_set,"CON Choose language:
+%{last_language_set}
+22. Previous
+00. Exit","CON Choisir la langue:
+%{last_language_set}
+22. Precedent
+00. Quitter"
+exit_invalid_ineti_amount,"CON Invalid amount.
+00. Back
+99. Exit","CON Montant invalide.
+00. Retour
+99. Quitter"
+enter_village_selection_first_set,"CON Select your village:
+1. Batoufam
+2. Bameka
+3. Fondjomokwet
+4. Other
+00. Exit","CON Choisir votre groupement:
+1. Batoufam
+2. Bameka
+3. Fondjomokwet
+4. Autre
+00. Quitter"
+enter_village_selection_middle_set,"CON Select your village:
+5. Foreke-Dschang
+6. Koutaba
+22. Back
+00. Exit","CON Choisir votre groupement:
+5. Foreke-Dschang
+6. Koutaba
+22. Retour
+00. Quitter"
+enter_full_name,"CON Enter your username
+00. Exit","CON Merci d'inserer votre nom d'utilisateur
+00. Quitter"
+enter_product_selection_first_set,"CON Choose type of product exchanged:
+1. Agricultural product
+2. Garden product
+3. Breeding product
+11. Next
+00. Exit","CON Choisir la raison de votre echange:
+1. Produit agricole
+2. Produit maraiche
+3. Produit elevage
+11. Suivant
+00. Annuler"
+enter_product_selection_middle_set,"CON Choose type of product exchanged:
+4. Artisanal product
+5. Service
+22. Back
+00. Exit","CON Choisir la raison de votre echange:
+4. Produit artisanat
+5. Service
+22. Retour
+00. Annuler"
+community_fund_balance_pin_authorization.first,"CON To consult the community fund, please enter your secret code:
+00. Cancel","CON Pour connaitr le solde de tresor communautaire, veuillez entrer votre code secret:
+00. Annuler"
+community_fund_balance_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+exit_community_fund_balance,"END Community fund balance: %{community_fund_balance} %{token_symbol}","END Solde de tresor communautaire: %{community_fund_balance} %{token_symbol}"
+enter_age,"CON What is your age?","CON Quelle est votre age?"
+economic_activity_selection,"CON What do you do to earn money ?
+1. Agriculture
+2. Service
+3. Commerce
+15. Other","CON Que faites-vous pour gagner de l'argent ?
+1. Agriculture
+2. Service
+3. Commerce
+15. Autre"
+community_membership_query,"CON Are you a member of a tontine or similar community association ?
+1. Yes
+2. No","CON Vous etes membre d'une tontine ou d'une association communautaire similaire ?
+1. Oui
+2. Non"
+monthly_expenditure_query,"CON Monthly expenditure ?
+1. 0-20000
+2. 20000-35000
+3. More than 35000","CON Depense mensuelle ?
+1. 0-20000
+2. 20000-35000
+3. Plus de 35000"
+food_security_query,"CON Have you experienced lack of food in the past 30 days ?
+1. Yes
+2. No","CON Avez-vous eu de la famine dans les 30 derniers jours ?
+1. Oui
+2. Non"
+twenty_thousand_band,"CON Specify
+1. 0-10000
+2. 10000-15000
+3. 15000-20000","CON Precisez
+1. 0-10000
+2. 10000-15000
+3. 15000-20000"
+thirty_five_thousand_band,"CON Specify
+1. 20000-25000
+2. 25000-30000
+3. 30000-35000","CON Precisez
+1. 20000-25000
+2. 25000-30000
+3. 30000-35000"
+above_thirty_five_thousand_band,"CON Specify
+1. 35000-40000
+2. 40000-45000
+3. 45000-50000","CON Precisez
+1. 35000-40000
+2. 40000-45000
+3. 45000-50000"
+balances_sub_menu,"CON Balances
+1. My balance
+2. Community fund balances
+0. Back","CON Solde
+1. Mon solde
+2. Solde de tresor communautaire"
+community_fund_balances,"CON %{community_fund_balance}
+0. Back
+9. Exit","CON %{community_fund_balance}
+0. Retour
+9. Quitter"
+community_fund_balances_pin_authorization.first,"CON Please enter your PIN to view balances
+0. Back","CON Veuillez entrer votre code PIN pour voir les soldes
+0. Retour"
+community_fund_balances_pin_authorization.retry,%{retry_pin_entry},%{retry_pin_entry}
+exit_successfully_invited_new_user,"CON You have successfully invited the member to join OurVillage.
+00. Back
+99. Exit","CON Vous avez invite le membre a rejoindre OurVillage.
+00. Retour
+99. Quitter"

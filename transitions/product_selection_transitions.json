@@ -1,0 +1,28 @@
+[
+    {
+    "trigger": "scan_data",
+    "source": "enter_product_selection_first_set",
+    "dest": "enter_product_selection_middle_set",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_eleven_selected",
+    "unless": "cic_ussd.state_machine.logic.transaction.is_valid_product_selection"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_product_selection_middle_set",
+    "dest": "enter_product_selection_first_set",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_twenty_two_selected",
+    "unless": "cic_ussd.state_machine.logic.transaction.is_valid_product_selection"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_product_selection_first_set",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "enter_product_selection_middle_set",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  }
+]

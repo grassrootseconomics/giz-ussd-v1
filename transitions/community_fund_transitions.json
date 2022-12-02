@@ -1,0 +1,20 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "community_fund_balance_pin_authorization",
+    "dest": "exit_community_fund_balance",
+    "conditions": "cic_ussd.state_machine.logic.pin.is_authorized_pin"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "community_fund_balance_pin_authorization",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "community_fund_balance_pin_authorization",
+    "dest": "exit_pin_blocked",
+    "conditions": "cic_ussd.state_machine.logic.pin.is_locked_account"
+  }
+]

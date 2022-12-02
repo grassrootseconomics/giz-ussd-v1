@@ -1,0 +1,29 @@
+keys,en,fr
+female,Female,Femme
+from,From,De
+male,Male,Homme
+not_provided,Not provided,Indisponible
+no_language_list,No language list,Pas de liste de langue
+no_transaction_history,No transaction history,Pas d'historique des transactions
+no_tokens_list,No more vouchers,Pas de bons
+other,Other,Autres
+received,Received,Reçu
+sent,Sent,Envoyé
+to,To,A
+guardians_list_header,Your PIN guards are:,Parrains du code PIN
+no_guardians_list,No PIN guardians set,Pas de code PIN parrain enregistré
+error.no_phone_number_provided,No phone number was provided,Aucun numero de téléphone fourni
+error.no_matching_account,The number provided is not registered,Le numero fourni n'est pas enregistré
+error.is_initiator,Phone number cannot be your own,Le numero ne peut vous appartenir
+error.is_existent_guardian,This phone number is already added as a PIN guardian,Le numero a déjà été enregistré comme parrain code PIN
+error.is_not_existent_guardian,Phone number not set as PIN guardian,Le numero n'a pas été enregistré comme parrain code PIN
+agricultural_product,"Agricultural product","Produit agricole"
+garden_product,"Garden product","Produit maraiche"
+breeding_product,"Breeding product","Produit elevage"
+artisanal_product,"Artisanal product","Produit artisanat"
+service,"Service","Service"
+agricultural_production,"Agriculture","Agriculture"
+service_provision,"Service","Service"
+commerce,"Commerce","Commerce"
+yes, "Yes", "Oui"
+no, "No", "Non"

@@ -1,0 +1,85 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_menu_option",
+    "dest": "start",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_menu_option",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_ninety_nine_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_input",
+    "dest": "start",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_input",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_ninety_nine_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "help",
+    "dest": "start",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "help",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_ninety_nine_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_recipient",
+    "dest": "enter_transaction_amount",
+    "after": [
+      "cic_ussd.state_machine.logic.transaction.save_recipient_phone_to_session_data",
+      "cic_ussd.state_machine.logic.transaction.retrieve_recipient_metadata"
+    ],
+    "conditions": "cic_ussd.state_machine.logic.transaction.is_valid_recipient"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_recipient",
+    "dest": "exit_successfully_invited_new_user",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_eleven_selected",
+    "after": "cic_ussd.state_machine.logic.sms.upsell_unregistered_recipient"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_invalid_recipient",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_ninety_nine_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_successful_transaction",
+    "dest": "start",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_successful_transaction",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_ninety_nine_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_successful_token_selection",
+    "dest": "start",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_zero_zero_selected"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "exit_successful_token_selection",
+    "dest": "exit",
+    "conditions": "cic_ussd.state_machine.logic.menu.menu_ninety_nine_selected"
+  }
+]

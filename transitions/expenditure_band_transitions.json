@@ -1,0 +1,28 @@
+[
+  {
+    "trigger": "scan_data",
+    "source": "twenty_thousand_band",
+    "dest": "account_creation_prompt",
+    "conditions": "cic_ussd.state_machine.logic.survey.is_valid_twenty_thousand_band_selection",
+    "after": "cic_ussd.state_machine.logic.account.process_account_creation"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "thirty_five_thousand_band",
+    "dest": "account_creation_prompt",
+    "conditions": "cic_ussd.state_machine.logic.survey.is_valid_thirty_five_thousand_band_selection",
+    "after": "cic_ussd.state_machine.logic.account.process_account_creation"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "above_thirty_five_thousand_band",
+    "dest": "account_creation_prompt",
+    "conditions": "cic_ussd.state_machine.logic.survey.is_valid_above_thirty_five_thousand_band_selection",
+    "after": "cic_ussd.state_machine.logic.account.process_account_creation"
+  },
+  {
+    "trigger": "scan_data",
+    "source": "food_security_query",
+    "dest": "exit_invalid_menu_option"
+  }
+]

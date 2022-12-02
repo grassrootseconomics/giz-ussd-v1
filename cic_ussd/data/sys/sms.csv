@@ -1,0 +1,7 @@
+keys,en,fr
+account_successfully_created,"You have been registered on OurVillage Network! To use dial #065#. For help %{support_phone}","Vous avez été enregistré sur le réseau OurVillage! Pour y avoir accès, composez #065#. Pour obtenir de l'aide appeler %{support_phone}"
+received_tokens,"Successfully received %{amount} %{token_symbol} from %{tx_sender_information} %{timestamp} to %{tx_recipient_information} Balance %{balance} %{token_symbol}","Reçu avec succès %{amount} %{token_symbol} de %{tx_sender_information} %{timestamp} de %{tx_recipient_information} Solde %{balance} %{token_symbol}"
+sent_tokens,"Successfully sent %{amount} %{token_symbol} to %{tx_recipient_information} %{timestamp} from %{tx_sender_information} Balance %{balance} %{token_symbol}","Envoi avec succès de %{amount} %{token_symbol} à %{tx_recipient_information} %{timestamp} de %{tx_sender_information} Balance %{balance} %{token_symbol}"
+terms,"By using this service, you agree to the terms and conditions available from OSA","En utilisant ce service, vous acceptez les termes et conditions accessible auprès de OSA"
+upsell_unregistered_recipient,"%{tx_sender_information} invited you to OurVillage. Dial #065# on MTNCameroon. For help %{support_phone}","%{tx_sender_information} vous a invité à OurVillage. Composez #065# sur le réseau MTNCameroun. Pour de l'aide %{support_phone}"
+pin_reset_initiated,"%{pin_initiator} has sent a request to initiate your PIN reset","%{pin_initiator} a envoyé une demande de réinitialisation de votre code PIN"

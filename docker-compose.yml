@@ -1,0 +1,79 @@
+  cic-user-ussd-server:
+    image: ${IMAGE_BASE_URL:-registry.gitlab.com/grassrootseconomics/cic-internal-integration}/cic-user:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        DOCKER_REGISTRY: ${DEV_DOCKER_REGISTRY:-registry.gitlab.com/grassrootseconomics}
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
+        EXTRA_PIP_INDEX_URL: ${EXTRA_PIP_INDEX_URL:-https://pip.grassrootseconomics.net}
+        EXTRA_PIP_ARGS: $EXTRA_PIP_ARGS
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST:-postgres}
+      DATABASE_PORT: ${DATABASE_PORT:-63432}
+      DATABASE_NAME: ${DATABASE_NAME:-cic_ussd}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-tralala}
+      DATABASE_USER: ${DATABASE_USER:-grassroots}
+      DATABASE_ENGINE: ${DATABASE_ENGINE:-postgres}
+      DATABASE_DRIVER: ${DATABASE_DRIVER:-psycopg2}
+      DATABASE_DEBUG: ${DATABASE_DEBUG:-0}
+      DATABASE_POOL_SIZE: 0
+      CHAIN_SPEC: ${CHAIN_SPEC:-evm:byzantium:8996:bloxberg}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://localhost:63379}
+      CELERY_RESULT_URL: ${CELERY_BROKER_URL:-redis://localhost:63379}
+      REDIS_PORT: 63379
+      REDIS_HOST: localhost
+      SERVER_PORT: 9000
+      E164_REGION: ${E164_REGION:-CM}
+      LOCALE_FALLBACK: ${LOCALE_FALLBACK:-fr}
+      RPC_PROVIDER: ${RPC_PROVIDER:-http://localhost:63545}
+    restart: on-failure
+    depends_on:
+      - postgres
+    ports:
+      - ${DEV_CIC_USER_USSD_SERVER_PORT:-63315}:9000
+      - 5051:5050
+    volumes:
+      - ./apps/contract-migration/testdata/pgp/:/usr/src/secrets/
+      - ./scripts/001_cic_ussd_init.sql:/docker-entrypoint-initdb.d/001_cic_graph_init.sql
+
+    command: "/root/start_cic_user_ussd_server.sh -vv"
+
+
+  cic-user-tasker:
+    image: ${IMAGE_BASE_URL:-registry.gitlab.com/grassrootseconomics/cic-internal-integration}/cic-user:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.org/simple}
+        EXTRA_PIP_INDEX_URL: ${EXTRA_PIP_INDEX_URL:-https://pip.grassrootseconomics.net}
+        EXTRA_PIP_ARGS: $EXTRA_PIP_ARGS
+        DOCKER_REGISTRY: ${DEV_DOCKER_REGISTRY:-registry.gitlab.com/grassrootseconomics}
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST:-postgres}
+      DATABASE_PORT: ${DATABASE_PORT:-5432}
+      DATABASE_NAME: ${DATABASE_NAME:-cic_ussd}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:-tralala}
+      DATABASE_USER: ${DATABASE_USER:-grassroots}
+      DATABASE_ENGINE: ${DATABASE_ENGINE:-postgres}
+      DATABASE_DRIVER: ${DATABASE_DRIVER:-psycopg2}
+      DATABASE_DEBUG: ${DATABASE_DEBUG:-0}
+      DATABASE_POOL_SIZE: 0
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL:-redis://localhost:63379}
+      CELERY_RESULT_URL: ${CELERY_BROKER_URL:-redis://localhost:63379}
+      CHAIN_SPEC: ${CHAIN_SPEC:-evm:byzantium:8996:bloxberg}
+      REDIS_PORT: 63379
+      REDIS_HOST: localhost
+      PGP_PASSPHRASE: merman
+      CIC_META_URL: ${CIC_META_URL:-http://localhost:63380}
+      RPC_PROVIDER: ${RPC_PROVIDER:-http://localhost:63545}
+      E164_REGION: ${E164_REGION:-CM}
+      LOCALE_FALLBACK: ${LOCALE_FALLBACK:-fr}
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./apps/contract-migration/testdata/pgp/:/usr/src/secrets/
+    command: "/root/start_cic_user_tasker.sh -q cic-ussd -vv"
